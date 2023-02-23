@@ -1,1 +1,1 @@
-# 🥉 Algorithm
+# 🥉 Bronze 
