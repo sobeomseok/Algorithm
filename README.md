@@ -1,2 +1,2 @@
-# 🥉 
-Bronze 5
+# Rate : 🥉 
+# AOD(Algorithm of the day) : 3 solve
