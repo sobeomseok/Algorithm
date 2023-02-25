@@ -62,7 +62,10 @@ final class FileIO {
 let fIO = FileIO()
 
 let input = fIO.readInt()
+var answer = ""
 
 for _ in 0...input - 1 {
-    print(fIO.readInt() + fIO.readInt())
+    answer += "\(fIO.readInt() + fIO.readInt())\n"
 }
+
+print(answer)
