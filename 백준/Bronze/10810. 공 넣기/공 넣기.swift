@@ -1,11 +1,16 @@
+let input = readLine()!.split(separator: " ").map {Int($0)!}
+let N = input[0]
+let M = input[1]
+var arr = Array(repeating: 0, count: N)
 
-let input = readLine()!.split(separator: " ").map { Int($0)! }
-let n = input[0], m = input[1]
-var basket = [Int](repeating: 0, count: n + 1)
-for _ in 0..<m {
-    let input = readLine()!.split(separator: " ").map { Int($0)! }
-    let start = input[0], end = input[1], num = input[2]
-    basket.replaceSubrange(start...end, with: [Int](repeating: num, count: end - start + 1))
+for _ in 0..<M {
+    let input = readLine()!.split(separator: " ").map {Int($0)!}
+    let i = input[0]
+    let j = input[1]
+    let k = input[2]
+    arr.replaceSubrange(i-1...j-1, with: repeatElement(k, count: j - i + 1))
 }
 
-basket[1...].forEach { print($0, terminator: " ") }
+arr.forEach {
+    print($0, terminator: " ")
+}
