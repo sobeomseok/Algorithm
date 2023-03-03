@@ -1,16 +1,15 @@
-let input = (readLine() ?? "").split {$0 == " "}.compactMap { Int($0) }
-var result: [Int] = []
+let input = readLine()!.split(separator: " ").map {Int($0)!}
+let N = input[0]
+let M = input[1]
+var arr = Array(1...N)
 
-for index in 1...input[0] {
-    result.append(index)
+for _ in 0...M - 1 {
+    let input = readLine()!.split(separator: " ").map {Int($0)!}
+    let i = input[0]
+    let j = input[1]
+    arr.swapAt(i - 1, j - 1)
 }
 
-for _ in 0..<input[1] {
-    let input = (readLine() ?? "").split {$0 == " "}.compactMap { Int($0) }
-    let tempA = result[input[0]-1]
-    let tempB = result[input[1]-1]
-    result[input[1]-1] = tempA
-    result[input[0]-1] = tempB
+arr.forEach {
+    print($0)
 }
-
-print(result.reduce("") { "\($0)\($1) " })
