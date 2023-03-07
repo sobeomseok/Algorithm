@@ -30,11 +30,11 @@ var arr = [Int](1...N)
 
 for _ in 0..<M {
     let input = readLine()!.split(separator: " ").map {Int($0)!}
-    var i = input[0] - 1
-    var j = input[1] - 1
+    var i = input[0]
+    var j = input[1]
     
     while i < j {
-        arr.swapAt(i, j)
+        arr.swapAt(i - 1, j - 1)
         i += 1
         j -= 1
     }
