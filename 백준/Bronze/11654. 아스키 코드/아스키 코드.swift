@@ -1,0 +1,2 @@
+print(Character(readLine()!).asciiValue!)
+
