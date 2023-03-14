@@ -1,3 +1,3 @@
-let input = readLine()!.split(separator: " ").map {String($0)}
+let input = readLine()!.split(separator: " ")
 
 print(input.count)
