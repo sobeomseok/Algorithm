@@ -1,9 +1,9 @@
 var input = readLine()!.map {String($0)}
 let original = input
 input.reverse()
-let reverseInput = input
+let reverse = input
 
-if original == reverseInput {
+if original == reverse {
     print(1)
 } else {
     print(0)
