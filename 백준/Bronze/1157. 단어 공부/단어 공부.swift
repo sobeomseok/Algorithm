@@ -1,14 +1,4 @@
-let input = readLine()!.uppercased()
-var dic = [Character: Int]()
+let dic = Dictionary(readLine()!.uppercased().map {($0, 1)}, uniquingKeysWith: +)
+let maxValue = dic.filter {$0.value == dic.values.max()!}
 
-for i in input {
-    if let value = dic[i] {
-        dic[i] = value + 1
-    } else {
-        dic[i] = 1
-    }
-}
-
-dic = dic.filter {$0.value == dic.values.max()!}
-
-dic.count > 1 ? print("?") : print(dic.keys.first!)
+maxValue.count > 1 ? print("?") : print(maxValue.keys.first!)
