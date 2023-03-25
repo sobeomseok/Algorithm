@@ -22,12 +22,4 @@ for _ in 0..<count {
     }
 }
 
-var tmp = ""
-
-for _ in 0..<rightInput.count {
-    tmp.append(rightInput.popLast()!)
-}
-
-rightInput = tmp
-
-print(leftInput + rightInput)
+print(leftInput + rightInput.reversed())
