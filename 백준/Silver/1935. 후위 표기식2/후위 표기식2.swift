@@ -9,21 +9,21 @@ for _ in 0..<n {
     arr.append(Double(readLine()!)!)
 }
  
-for i in input {
-    switch i {
+for char in input {
+    switch char {
     case "+":
         stack.append(stack.removeLast() + stack.removeLast())
     case "-":
-        let f = stack.removeLast()
-        stack.append(stack.removeLast() - f)
+        let i = stack.removeLast()
+        stack.append(stack.removeLast() - i)
     case "*":
         stack.append(stack.removeLast() * stack.removeLast())
     case "/":
-        let f = stack.removeLast()
-        stack.append(stack.removeLast() / f)
+        let i = stack.removeLast()
+        stack.append(stack.removeLast() / i)
     default:
-        let index = i.asciiValue! - 65
-        stack.append(arr[Int(index)])
+        let i = char.asciiValue! - 65
+        stack.append(arr[Int(i)])
     }
 }
 print(String(format: "%.2f", stack[0]))
